@@ -2,6 +2,7 @@
 using System.Windows;
 using TaskLibrary.Abstraction;
 using TaskLibrary.Classes;
+using TaskLibrary.Interfaces;
 
 namespace TaskLibrary
 {
@@ -10,8 +11,8 @@ namespace TaskLibrary
     /// </summary>
     public partial class MainWindow : Window
     {
-        public VariableBase<Book> BooksContainer = new BooksContainer();
-        public VariableBase<Reader> ReadersContainer = new ReadersContainer();
+        public IBase<Book> BooksContainer = new BooksContainer();
+        public IBase<Reader> ReadersContainer = new ReadersContainer();
         public IBookDistributor BookDistributor = new BookDistributor();
 
         public MainWindow()
